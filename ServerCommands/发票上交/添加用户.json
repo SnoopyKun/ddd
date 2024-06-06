@@ -1,0 +1,78 @@
+{
+  "Name": "添加用户",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser"
+              ]
+            }
+          ]
+        }
+      },
+      "Parameters": [
+        {
+          "Name": "用户名",
+          "DataValidationInfo": {}
+        },
+        {
+          "Name": "全名",
+          "DataValidationInfo": {}
+        },
+        {
+          "Name": "邮箱",
+          "DataValidationInfo": {}
+        },
+        {
+          "Name": "公司代码",
+          "DataValidationInfo": {}
+        }
+      ]
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "UserManagementCommands.Commands.AddUserCommand, UserManagementCommands",
+      "UserName": {
+        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+        "SerializeProperty": "=用户名"
+      },
+      "FullName": {
+        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+        "SerializeProperty": "=全名"
+      },
+      "Password": "123456",
+      "Email": {
+        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+        "SerializeProperty": "=邮箱"
+      },
+      "ExtendedProperties": [
+        {
+          "Name": "公司代码",
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=公司代码"
+          }
+        }
+      ]
+    },
+    {
+      "$type": "UserManagementCommands.Commands.AddUserToRoleCommand, UserManagementCommands",
+      "UserName": {
+        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+        "SerializeProperty": "=用户名"
+      },
+      "RoleName": "餐补组"
+    }
+  ]
+}

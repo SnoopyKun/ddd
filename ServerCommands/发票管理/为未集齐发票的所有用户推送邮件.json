@@ -1,0 +1,108 @@
+{
+  "Name": "为未集齐发票的所有用户推送邮件",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.InvokeTriggerSaveData, ServerDesignerCommon",
+      "Parameters": [
+        {
+          "Name": "月份",
+          "DataValidationInfo": {}
+        }
+      ]
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "用户列表",
+      "TableValue": {
+        "TableName": "用户信息视图",
+        "BindingInfos": [
+          {
+            "GUID": "1736d5bb-6943-4a94-9b9d-e680e88612f3",
+            "BindingInfo": {
+              "TableName": "用户信息视图",
+              "ColumnName": "用户名",
+              "GUID": "c710ae70-7a86-4b71-b633-e9d0b3824f73"
+            },
+            "ColumnName": "用户名"
+          },
+          {
+            "GUID": "e1cf27ef-69f2-4137-a51e-70f6f9022b3a",
+            "BindingInfo": {
+              "TableName": "用户信息视图",
+              "ColumnName": "全名",
+              "GUID": "2b3d7ef5-3994-46d3-ad84-b9b0dbf3ef88"
+            },
+            "ColumnName": "全名"
+          },
+          {
+            "GUID": "2561029b-8acc-4044-9498-b27c81e377f4",
+            "BindingInfo": {
+              "TableName": "用户信息视图",
+              "ColumnName": "邮件",
+              "GUID": "57e629c6-58ff-4ee4-b0b3-55d0db61154f"
+            },
+            "ColumnName": "邮件"
+          }
+        ],
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+          "CompareType": 6,
+          "ColumnBindingInfo": {
+            "TableName": "用户信息视图",
+            "ColumnName": "角色",
+            "GUID": "ebb973f3-a6c4-4539-88f2-a087c68639d8"
+          },
+          "Value": "餐补组"
+        }
+      },
+      "ID": "c11ba51f297d417fa00b60ff8237337a"
+    },
+    {
+      "$type": "Forguncy.Model.LoopCommand, ServerDesignerCommon",
+      "LoopInfo": {
+        "$type": "Forguncy.Model.CountLoopInfo, ServerDesignerCommon",
+        "LoopCount": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=用户列表"
+        },
+        "LoopItemParamName": "Item"
+      },
+      "CommandList": [
+        {
+          "$type": "Forguncy.Model.CatchExceptionCommand, ServerDesignerCommon",
+          "TryCommandPart": {
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                "ServerCommandName": "为未集齐发票的特定用户推送邮件",
+                "Parameters": [
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                    "ParamName": "用户",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=Item.用户名"
+                    }
+                  },
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                    "ParamName": "月份",
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=月份"
+                    }
+                  }
+                ],
+                "RefreshAfterFinish": true,
+                "CheckDataValidation": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

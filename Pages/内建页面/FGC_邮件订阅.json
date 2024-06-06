@@ -1,0 +1,173 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "18": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 10.0
+        }
+      },
+      "21": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 30.0
+        }
+      }
+    },
+    "Count": 26
+  },
+  "Cols": {
+    "Count": 47
+  },
+  "Values": {
+    "5,12": "邮件订阅设置",
+    "8,12": "请选择邮件通知的种类",
+    "19,24": "确定",
+    "19,29": "取消"
+  },
+  "AttachInfos": {
+    "10,15": {
+      "CellType": {
+        "$type": "Forguncy.RadioGroupCellType, ServerDesignerCommon",
+        "Style": 1,
+        "LayoutMode": 1,
+        "Items": [
+          {
+            "Value": "0",
+            "DisplayValue": "不通知"
+          },
+          {
+            "Value": "1",
+            "DisplayValue": "所有变更都通知"
+          },
+          {
+            "Value": "2",
+            "DisplayValue": "其他用户创建或修改记录的时候发送通知"
+          },
+          {
+            "Value": "3",
+            "DisplayValue": "我创建的记录被修改的时候发送通知"
+          },
+          {
+            "Value": "4",
+            "DisplayValue": "指定给我的记录被修改的时候发送通知"
+          }
+        ],
+        "ForguncyAttribute": "MailSubscription_Choice"
+      }
+    },
+    "19,24": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "Text": "确定",
+        "AutoExecute": true,
+        "TemplateKey": "样式4",
+        "ForguncyAttribute": "MailSubscription_Button"
+      }
+    },
+    "19,29": {
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+            "NavigateType": "back"
+          }
+        ],
+        "Text": "取消"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontSize": 37.33333206176758,
+        "Foreground": 0
+      },
+      {
+        "Foreground": 0
+      },
+      {
+        "FontSize": 13.333333015441895,
+        "WordWrap": true
+      },
+      {
+        "FontSize": 14.0,
+        "FontWeight": 1
+      },
+      {
+        "FontSize": 14.0,
+        "FontWeight": 1,
+        "Foreground": 2,
+        "HorizontalAlignment": 3
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Text 1 25",
+        "Bold",
+        "Accent 1 0",
+        "Center",
+        "Body"
+      ]
+    },
+    "CellStyles": {
+      "5,12": 0,
+      "8,12": 1,
+      "10,15": 2,
+      "19,24": 3,
+      "19,29": 4
+    },
+    "SheetStyle": {
+      "FontFamily": 4,
+      "Underline": false,
+      "Strikethrough": false
+    }
+  },
+  "Spans": [
+    "5,12,3,23",
+    "8,12,2,13",
+    "10,15,8,19",
+    "19,24,2,5",
+    "19,29,2,6"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "MasterPageName": "FGC_母版页",
+    "MobilePageName": "FGC_邮件订阅_手机版",
+    "Title": "邮件订阅",
+    "PermissionData": {
+      "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionData, Forguncy.RbacPermission.Core",
+      "permissionResource": {
+        "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionResource, Forguncy.RbacPermission.Core"
+      },
+      "permissionBindings": [
+        {
+          "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionBinding, Forguncy.RbacPermission.Core",
+          "roleNames": [
+            "FGC_Anonymous"
+          ]
+        }
+      ]
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": [],
+    "IsBuiltInPage": true
+  },
+  "PrintInfo": {
+    "PaperSize": {},
+    "Margin": {}
+  },
+  "BackgroundPictures": [
+    {
+      "Name": "ceb28d52-85eb-4188-a272-9c46f964710c.png",
+      "StyleInfo": {
+        "Fill": "Background 1 -5",
+        "Stroke": "Background 1 -25",
+        "StrokeThickness": 1.0
+      },
+      "IsAutomaticStroke": false,
+      "IsAutomaticFill": false,
+      "Location": "200,80",
+      "Size": "540,360"
+    }
+  ]
+}//XHv4TmH8xr6RUlBKAsuL7mVlI43WQqS6xph1NneeGdvUQitzRLHYLG6O9kJWr4i5MyIOMrRnhqlvhiok1zGnVWtCZI8JkqxNV/mGKPpJd1iKqu+8Db3uDFtoQjQTx7OWWWShSQ7n4EpRwjJ9ftibVh6xbKkkIHQfvjU/YjvyWaoDR9RZ2Uou0+9VBoTGdzXC0zYWSu+dS7ZgOZvedUrhvLqf2IrhuOi+wDDmtej4XBrzszzBSzBlVufJIM2qATc2lWUimwTqjFVEstd7JxOaGlrwMhM7N2vydUWuoqe2lDqdJSddoo2iMqKg9T9cOpYfsQpq32sbWly4HZdXc/1QvZuiG41xtKvRb2c9DIjayaI7XkaF5kPl8pKk9TzYLar+0RmvWDyXafvyFpZ3H/KfQweaUnP7iUypXeBFT+f1XC1w7vbkjj8rhXJ2IC9mNCDAZqvHO/RDg4tgXki+wFW/A8Fp01wkez2Q7IU9UYeFgWbJJd33GPLUDiu+3Ar12YyR1Nz+v0PtV1pPIaUjrF9aISHDiAwmBuIlEtEjoTq/j7DzTpkBON6PrTaVq2zj0wYiw5v4PTAlZ+/2mLMO9yfgUorAdlNFCVuY/QWp2dg5HpFfzbsByMkmHdJo/ua5Iq5v9d3kXNSquUcEefN+zXnV2RcOF0fxhPVR7Syzd/SSxE17vS9Z89jsYAY/VwuY2N9I+kdT/3GxaRCeUV/fD1fMJpKaQfTKMLAXM4L9w06cw6UE1IawTVu8e68ljn75TVoOUrkaqkSZ24lPIY8XeINtEd5iM0hGXf2fOkKMM6WG3mlbDCA9pKCdhUWoD2XmmSkU37+PhWH2NaEFO6LL/Fd36CSk6gPxgIBg8XNz8WObu6lsj6sgJ0fyOWTYzh6cZGsGNtOE5kX2w11mzJrvg1hzLw==|920

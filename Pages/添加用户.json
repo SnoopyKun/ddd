@@ -1,0 +1,214 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "2": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 30.0
+        }
+      },
+      "4": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 30.0
+        }
+      },
+      "6": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 30.0
+        }
+      },
+      "8": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 30.0
+        }
+      },
+      "10": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 30.0
+        }
+      }
+    },
+    "Count": 13
+  },
+  "Cols": {
+    "Count": 20
+  },
+  "Values": {
+    "2,2": "用户名",
+    "4,2": "全名",
+    "6,2": "邮箱",
+    "8,2": "公司代码",
+    "8,6": "gc",
+    "10,7": "取消",
+    "10,13": "确定"
+  },
+  "AttachInfos": {
+    "2,6": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "样式1"
+      }
+    },
+    "4,6": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "样式1"
+      }
+    },
+    "6,6": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "样式1"
+      }
+    },
+    "8,6": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "样式1",
+        "CellDefaultValue": "gc",
+        "IsBounding": true,
+        "DataSource": "Invoice_发票公司",
+        "ValueColumnBindingInfo": {
+          "TableName": "Invoice_发票公司",
+          "ColumnName": "公司代码",
+          "GUID": "f9736de9-9805-4ea9-8442-892cc759f078"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "Invoice_发票公司",
+          "ColumnName": "公司",
+          "GUID": "736408fb-7438-4589-836e-7d46d6cdcf7b"
+        }
+      }
+    },
+    "10,7": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ClosePopupCommand, ServerDesignerCommon"
+          }
+        ],
+        "Text": "取消",
+        "TemplateKey": "样式2"
+      }
+    },
+    "10,13": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+            "ServerCommandName": "添加用户",
+            "Parameters": [
+              {
+                "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                "ParamName": "用户名",
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=添加用户!G3"
+                }
+              },
+              {
+                "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                "ParamName": "全名",
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=添加用户!G5"
+                }
+              },
+              {
+                "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                "ParamName": "邮箱",
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=添加用户!G7"
+                }
+              },
+              {
+                "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                "ParamName": "公司代码",
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=添加用户!G9"
+                }
+              }
+            ],
+            "CheckDataValidation": false
+          },
+          {
+            "$type": "Forguncy.Model.ClosePopupCommand, ServerDesignerCommon",
+            "ReloadData": true
+          }
+        ],
+        "Text": "确定",
+        "TemplateKey": "样式5"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "Formatter": 0
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "@",
+        "Body"
+      ]
+    },
+    "CellStyles": {
+      "2,6": 0,
+      "4,6": 0,
+      "6,6": 0
+    },
+    "SheetStyle": {
+      "FontFamily": 1
+    }
+  },
+  "Spans": [
+    "2,6,1,12",
+    "4,6,1,12",
+    "6,6,1,12",
+    "8,6,1,12",
+    "10,13,1,5",
+    "10,7,1,5"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "PermissionData": {
+      "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionData, Forguncy.RbacPermission.Core",
+      "permissionResource": {
+        "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionResource, Forguncy.RbacPermission.Core"
+      },
+      "permissionBindings": [
+        {
+          "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionBinding, Forguncy.RbacPermission.Core",
+          "roleNames": [
+            "FGC_LoginUser"
+          ]
+        }
+      ]
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "PaperSize": {},
+    "Margin": {}
+  }
+}//+ns/pprWkqOX68GjYEochKpj9/ZAJB8qfYIN6HwCI2B7SFLq+Wvfx9t8jt7An+4PadRBNcHlsWnR7x5Bs6/B0H4RfgTNa69k/aiuiEjGH55lbftVNpidz/Oijd/6KNzPEboCDGIqc3Tj5yBMIv0o8bez03vJ3F/uHXfTr03VD1x5gn/qOP53vmeW6Ad7MveCHGDSM3w3mZTVz2XVHGn2X0Bs3uwmZ8ax66ikrDl+92JHDT3ZY5sZJrPEagMfLryXhb4cJc5HQrC+iE2nI3/fDDQ0k5onDjx/2qU6PY2GAo/xx2Jl/ZH5qHYghE7TGgyfuQ6Wv4M0DaMTGuWPshvBw1rVim30iwgvmPAS65RP4zjl/NRyOk+QGECtM685GJDN0bwrOwdAau23ouigKiKiub6mDb5LgfJmMyhzRY/KI+v5jc0y1t32wQfVgeeh5H1PZGba0JPZaOCsNugUocwRmrokeKsx+Og//P9W/3QKEmMY216sAhvVLJ+SGddNED//xmErN8g/tztWFdbSMntf2C1YHlLR+GKNCvTuug/LCl2537LsitzPbpoYlPc9zvNlc68phYBpRRwpyNZqZGbGiapeXZMGToLBcd6A1Bgg20h0uIjfYDghsGxzD5NohloVxMqd1okuw8RqOftkDW+KDYs8XOmhSQa1zjq9fUejokkNO+v9CM7QqTcbXbaq7toeB3lrybReH4XiqQkMXHnKcEK6s/W1vBIjt+grkGK+HZXdWKjMmE+yU2A0g5BWtzXkOycCWA60x8EFbhzTPAuGNzUuQ0KEWrtZ04YPiL71Y0mrAC1oTLW2vJONfEKYu3FM+3mLB4Z8jycZI3DrNjwRQdbbixpcnoWNr8hOe9vdQJbwbc02K1TlFHNVt5lHklpkab+FdKVn7s17nJ0USWvMIA==|920

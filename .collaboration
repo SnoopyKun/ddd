@@ -1,0 +1,255 @@
+[
+  {
+    "ModuleName": "TableView/用户信息视图",
+    "ModuleType": 23,
+    "ExclusiveType": 0
+  },
+  {
+    "ModuleName": "Pages/内建手机页面",
+    "ModuleType": 6
+  },
+  {
+    "ModuleName": "MobilePage/FGC_401页面_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_维护中_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_邮件订阅_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "MobilePage/FGC_连接已断开_手机版",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "Pages/内建页面",
+    "ModuleType": 6
+  },
+  {
+    "ModuleName": "PCPage/FGC_401页面",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_维护中",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_邮件订阅",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/FGC_连接已断开",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/上传发票",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/发票下载",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/发票管理",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/我的发票",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "MobilePage/我的发票手机页",
+    "ModuleType": 2
+  },
+  {
+    "ModuleName": "PCPage/添加用户",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/餐补记录",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/内部表页面",
+    "ModuleType": 1
+  },
+  {
+    "ModuleName": "MasterPCPage/FGC_母版页",
+    "ModuleType": 3
+  },
+  {
+    "ModuleName": "MasterPCPage/母版页",
+    "ModuleType": 3
+  },
+  {
+    "ModuleName": "ServerCommands/发票上交",
+    "ModuleType": 20
+  },
+  {
+    "ModuleName": "ServerCommand/打包下载符合条件的pdf电子发票",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommand/标记发票已打印",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommand/添加用户",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommand/获取打印发票列表",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommands/发票管理",
+    "ModuleType": 20
+  },
+  {
+    "ModuleName": "ServerCommand/setCompany",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommandPrivate/为未集齐发票的所有用户推送邮件",
+    "ModuleType": 27
+  },
+  {
+    "ModuleName": "ServerCommandPrivate/为未集齐发票的特定用户推送邮件",
+    "ModuleType": 27
+  },
+  {
+    "ModuleName": "ServerCommand/年底清空数据",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommand/手动为未集齐发票的所有用户推送邮件",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommand/手动为未集齐发票的特定用户推送邮件",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommands/我的发票",
+    "ModuleType": 20
+  },
+  {
+    "ModuleName": "ServerCommand/上传发票",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommand/修改发票",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommand/删除发票",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommand/结转当前用户上传月份及其后续月份的发票金额",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommand/结转所有用户上传月份及其后续月份的发票金额",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "ServerCommandPrivate/结转特定用户上传月份及其后续月份的发票金额",
+    "ModuleType": 27
+  },
+  {
+    "ModuleName": "ServerCommandPrivate/结转特定用户的发票金额",
+    "ModuleType": 27
+  },
+  {
+    "ModuleName": "ServerCommand/获取发票信息",
+    "ModuleType": 15
+  },
+  {
+    "ModuleName": "TaskScheduler/同步每月发票是否集齐",
+    "ModuleType": 16
+  },
+  {
+    "ModuleName": "TaskScheduler/月底推送上交发票通知",
+    "ModuleType": 16
+  },
+  {
+    "ModuleName": "ApplicationSetting",
+    "ModuleType": 8
+  },
+  {
+    "ModuleName": "Theme",
+    "ModuleType": 9
+  },
+  {
+    "ModuleName": "image/内置图片",
+    "ModuleType": 37
+  },
+  {
+    "ModuleName": "Image/fgc_loading.gif",
+    "ModuleType": 38
+  },
+  {
+    "ModuleName": "Image/fgc_logo_dark.png",
+    "ModuleType": 38
+  },
+  {
+    "ModuleName": "Image/fgc_logo_light.png",
+    "ModuleType": 38
+  },
+  {
+    "ModuleName": "Image/fgc_built_in_page_disconnected.png",
+    "ModuleType": 38
+  },
+  {
+    "ModuleName": "UserService",
+    "ModuleType": 11
+  },
+  {
+    "ModuleName": "CustomLibrary",
+    "ModuleType": 12
+  },
+  {
+    "ModuleName": "MapJsonFile",
+    "ModuleType": 14
+  },
+  {
+    "ModuleName": "DataContectionSet",
+    "ModuleType": 25
+  },
+  {
+    "ModuleName": "Upload",
+    "ModuleType": 26
+  },
+  {
+    "ModuleName": "PublishConfiguration",
+    "ModuleType": 39
+  },
+  {
+    "ModuleName": "Plugin",
+    "ModuleType": 40
+  },
+  {
+    "ModuleName": "PublishSetting",
+    "ModuleType": 41
+  },
+  {
+    "ModuleName": "Table/Invoice_发票公司",
+    "ModuleType": 7
+  },
+  {
+    "ModuleName": "Table/Invoice_实缴发票记录表",
+    "ModuleType": 7
+  },
+  {
+    "ModuleName": "Table/Invoice_每月餐补记录表",
+    "ModuleType": 7
+  },
+  {
+    "ModuleName": "Table/Invoice_餐补报销方式",
+    "ModuleType": 7
+  }
+]

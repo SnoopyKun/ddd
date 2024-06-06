@@ -1,0 +1,7 @@
+[
+  {
+    "ConnectionString": "Data Source=xa-office-mgmt;Initial Catalog=GCXAMgmt2;Integrated Security=True",
+    "DataBaseType": "347a1ed5-25f0-4a4b-846c-8d69cedcf33d",
+    "ID": "SqlServer1"
+  }
+]

@@ -1,0 +1,381 @@
+{
+  "Rows": {
+    "Count": 45
+  },
+  "Cols": {
+    "Count": 65
+  },
+  "Values": {
+    "1,2": "发票公司",
+    "1,25": "餐补报销方式",
+    "9,2": "实缴发票记录表",
+    "26,2": "每月餐补记录表"
+  },
+  "AttachInfos": {
+    "2,2": {
+      "ListViewInfo": {
+        "Name": "表格1",
+        "TableName": "Invoice_发票公司",
+        "RowIndex": 2,
+        "ColumnIndex": 2,
+        "RowCount": 6,
+        "ColumnCount": 20,
+        "TopCondition": null,
+        "ListViewStyleName": "样式1",
+        "ShowColumnHeaderInDesigner": true,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "AllowEditInListview": true,
+        "AllowAddNewRow": true,
+        "ShowDeleteButton": true,
+        "ColumnOperation": 2
+      }
+    },
+    "2,25": {
+      "ListViewInfo": {
+        "Name": "表格2",
+        "TableName": "Invoice_餐补报销方式",
+        "RowIndex": 2,
+        "ColumnIndex": 25,
+        "RowCount": 6,
+        "ColumnCount": 26,
+        "TopCondition": null,
+        "ListViewStyleName": "样式1",
+        "ShowColumnHeaderInDesigner": true,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "AllowEditInListview": true,
+        "AllowAddNewRow": true,
+        "ShowDeleteButton": true,
+        "ColumnOperation": 2
+      }
+    },
+    "3,2": {
+      "BindingInfo": {
+        "TableName": "Invoice_发票公司",
+        "ColumnName": "ID",
+        "GUID": "8ad88032-ba44-43e3-89f5-0345eee266ab"
+      }
+    },
+    "3,5": {
+      "BindingInfo": {
+        "TableName": "Invoice_发票公司",
+        "ColumnName": "公司代码",
+        "GUID": "dea45378-1fb7-468d-9c3c-797c210055c0"
+      }
+    },
+    "3,11": {
+      "BindingInfo": {
+        "TableName": "Invoice_发票公司",
+        "ColumnName": "公司",
+        "GUID": "f0840968-ed20-46ca-b844-6bf7ecd52dbf"
+      }
+    },
+    "3,25": {
+      "BindingInfo": {
+        "TableName": "Invoice_餐补报销方式",
+        "ColumnName": "ID",
+        "GUID": "6b9d7c46-77fb-4af9-ab70-0ac51fde4864"
+      }
+    },
+    "3,28": {
+      "BindingInfo": {
+        "TableName": "Invoice_餐补报销方式",
+        "ColumnName": "报销方式",
+        "GUID": "6013cef8-c1f0-43df-b87e-876bb9eebbda"
+      }
+    },
+    "10,2": {
+      "ListViewInfo": {
+        "Name": "表格3",
+        "TableName": "Invoice_实缴发票记录表",
+        "RowIndex": 10,
+        "ColumnIndex": 2,
+        "RowCount": 15,
+        "ColumnCount": 61,
+        "OrderByCondition": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "Invoice_实缴发票记录表",
+                "ColumnName": "ID",
+                "GUID": "f90dfd23-78ef-42bc-9c65-bd9eb5ebabbc"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "TopCondition": null,
+        "ListViewStyleName": "样式1",
+        "ShowColumnHeaderInDesigner": true,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "AllowEditInListview": true,
+        "AllowAddNewRow": true,
+        "ShowDeleteButton": true,
+        "ColumnOperation": 2
+      }
+    },
+    "11,2": {
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "ID",
+        "GUID": "2ae39459-2042-488b-86b0-660d5b7c53de"
+      }
+    },
+    "11,5": {
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "月份",
+        "GUID": "879e4d7f-75c4-482d-8c64-68ac07151b93"
+      }
+    },
+    "11,9": {
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "用户",
+        "GUID": "2dc571d8-4471-4d8d-a2cb-023462e37956"
+      }
+    },
+    "11,16": {
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "金额",
+        "GUID": "3efbcd3e-7cc2-4e3b-ba75-5095f8f2dc51"
+      }
+    },
+    "11,21": {
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "电子发票",
+        "GUID": "59058db1-4556-4605-806b-bd64148878c0"
+      }
+    },
+    "11,32": {
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "是否由上月结转",
+        "GUID": "476dd2b9-e738-4c37-b66f-91baeb5547cc"
+      }
+    },
+    "11,39": {
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "是否已打印",
+        "GUID": "bb04944e-8516-4595-9b88-8eb2b513a71b"
+      }
+    },
+    "11,44": {
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "打印月份",
+        "GUID": "8b5ed3ac-5782-4b30-8cc4-0d5b03b9c87f"
+      }
+    },
+    "11,48": {
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "公司代码",
+        "GUID": "e6ce88a1-d454-4356-84f8-89cca0b54f18"
+      }
+    },
+    "11,52": {
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "备注",
+        "GUID": "e55f11b9-b09c-4f86-8639-377d9c472a5f"
+      }
+    },
+    "11,57": {
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "发票类型",
+        "GUID": "8948d782-b5cb-4c42-b085-b6f42b104cf4"
+      }
+    },
+    "27,2": {
+      "ListViewInfo": {
+        "Name": "表格4",
+        "TableName": "Invoice_每月餐补记录表",
+        "RowIndex": 27,
+        "ColumnIndex": 2,
+        "RowCount": 16,
+        "ColumnCount": 61,
+        "OrderByCondition": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "Invoice_每月餐补记录表",
+                "ColumnName": "ID",
+                "GUID": "b1298c42-2c0e-49db-864b-3c75d455226d"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "TopCondition": null,
+        "ListViewStyleName": "样式1",
+        "ShowColumnHeaderInDesigner": true,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "AllowEditInListview": true,
+        "AllowAddNewRow": true,
+        "ShowDeleteButton": true,
+        "ColumnOperation": 2
+      }
+    },
+    "28,2": {
+      "BindingInfo": {
+        "TableName": "Invoice_每月餐补记录表",
+        "ColumnName": "ID",
+        "GUID": "22d1dcea-777c-4296-910e-86202275440e"
+      }
+    },
+    "28,5": {
+      "BindingInfo": {
+        "TableName": "Invoice_每月餐补记录表",
+        "ColumnName": "月份",
+        "GUID": "3c182f56-4a0a-41e9-b536-26cd0c11b478"
+      }
+    },
+    "28,9": {
+      "BindingInfo": {
+        "TableName": "Invoice_每月餐补记录表",
+        "ColumnName": "用户",
+        "GUID": "8ce73487-daac-482f-98fa-8b2425948bba"
+      }
+    },
+    "28,16": {
+      "BindingInfo": {
+        "TableName": "Invoice_每月餐补记录表",
+        "ColumnName": "报销方式ID",
+        "GUID": "0b7d2ba6-acca-447b-bd8c-253a2b3123d4"
+      }
+    },
+    "28,21": {
+      "BindingInfo": {
+        "TableName": "Invoice_每月餐补记录表",
+        "ColumnName": "金额",
+        "GUID": "fcc8787a-db03-4c60-be49-f37f9cc5253c"
+      }
+    },
+    "28,28": {
+      "BindingInfo": {
+        "TableName": "Invoice_每月餐补记录表",
+        "ColumnName": "餐补是否发放",
+        "GUID": "15291579-94fd-42e4-b6d4-bfd7d44311ba"
+      }
+    },
+    "28,34": {
+      "BindingInfo": {
+        "TableName": "Invoice_每月餐补记录表",
+        "ColumnName": "发票是否集齐",
+        "GUID": "3a25a75a-2563-4151-bedf-cfbb36381969"
+      }
+    },
+    "28,41": {
+      "BindingInfo": {
+        "TableName": "Invoice_每月餐补记录表",
+        "ColumnName": "公司代码",
+        "GUID": "aee9e384-4f08-4bba-a369-d27d6725621a"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderRight": null
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Body"
+      ]
+    },
+    "CellStyles": {
+      "10,62": 0
+    },
+    "SheetStyle": {
+      "FontFamily": 0
+    }
+  },
+  "Spans": [
+    "4,2,4,20",
+    "3,2,1,3",
+    "3,5,1,6",
+    "3,11,1,10",
+    "4,25,4,26",
+    "3,25,1,3",
+    "3,28,1,10",
+    "11,2,1,3",
+    "11,5,1,4",
+    "11,9,1,7",
+    "11,16,1,5",
+    "11,21,1,11",
+    "11,32,1,7",
+    "11,39,1,5",
+    "11,44,1,4",
+    "11,48,1,4",
+    "11,57,1,5",
+    "12,2,13,61",
+    "29,2,14,61",
+    "28,2,1,3",
+    "28,5,1,4",
+    "28,9,1,7",
+    "28,16,1,5",
+    "28,21,1,7",
+    "28,28,1,6",
+    "28,34,1,7",
+    "28,41,1,6",
+    "11,52,1,5",
+    "2,2,1,3",
+    "2,5,1,6",
+    "2,11,1,10",
+    "2,25,1,3",
+    "2,28,1,10",
+    "10,2,1,3",
+    "10,5,1,4",
+    "10,9,1,7",
+    "10,16,1,5",
+    "10,21,1,11",
+    "10,32,1,7",
+    "10,39,1,5",
+    "10,44,1,4",
+    "10,48,1,4",
+    "10,52,1,5",
+    "10,57,1,5",
+    "27,2,1,3",
+    "27,5,1,4",
+    "27,9,1,7",
+    "27,16,1,5",
+    "27,21,1,7",
+    "27,28,1,6",
+    "27,34,1,7",
+    "27,41,1,6"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "PermissionData": {
+      "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionData, Forguncy.RbacPermission.Core",
+      "permissionResource": {
+        "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionResource, Forguncy.RbacPermission.Core"
+      },
+      "permissionBindings": [
+        {
+          "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionBinding, Forguncy.RbacPermission.Core",
+          "roleNames": [
+            "FGC_LoginUser"
+          ]
+        }
+      ]
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "PaperSize": {},
+    "Margin": {}
+  }
+}//rnzy3LLEgGPDbIxtUHMeHo/injlMosDMkoUwIm9Hd3ItHeTXX4PFBylMp1QF31bNQdL3Wg7Qz0CbSG4zlvRPKh3hGxF+vVjoBYUJSJF2cy8Bezxbm5kBjvuYOUwiyT59OEFpvitunulbIxGzGINAGHHTKWmnlcxOh2S/kHrRI1asz5biVt44sk36T2uMnXzxkmVRZTYcjs4k8x8/K1sjXIxmBBwKVH51tBIJVzhafCBZGj25i10obshlDrgVysnw2cZGp0W6zwYS7LZIN9dDe03u/L5vC3psrVv56ZO0BEQmBe52jqipRy+93iGkpPBtOduk+w1RXXw5XJwJ30dCCBwNIF475AcJ924d+MpUmdLGzfq9BO/DbufgC02m+m7PuU37VHaCnpWWpKATw3db6lqSE4jGM3ezQDnf2yehBVzqWp9y7xymAZQCDVzmud7qPqaqvZi46gvOGZhyJ8M1I/jvXM8lgdg9H63nGGfvYAIuJo125dFbQeO7C9T0rusW3p9UP7Vte0q2TxNNwt+C2lPyOSeoiyqiELoiUz4clJ8YOml2hWtHFI97gNfHXrtOr8HQ/a8GUlJ0TOh5T7dBY9lqzpiiChWPs7SnzNMl2jU6IEMYBbtfq5IBIsD/zG9hwb6hpE32HL/oLVrS2CvzjvExx5KyNayHUhTl67XGi2l/G8/aLPcmqJNIKsDoCqZZXFj0geMZuUkuwwDrtxk1h90LMruTllBueIqZfQnfY9PD6j5YW2/Sd6y8dilkjX3ZYOnlNGwkJO3FhZkqXqKtaYvwhd1PYRl3zTXVPlGN8KbY2qJQHR8p/S30MeRoyziuqJkUFolXfpj4qXW7bbOJG5ZrF9cE/A+U4jSnKJTaOBHKbDTWsXQNnGF0kYbTNS8HaG8ewZxBbb4AkxIh77Gjqw==|920

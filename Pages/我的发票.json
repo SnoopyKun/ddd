@@ -1,0 +1,1334 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "0": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "1": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 35.0
+        }
+      },
+      "2": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "3": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "4": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 35.0
+        }
+      },
+      "5": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "6": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "7": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 35.0
+        }
+      },
+      "8": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "9": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "10": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "12": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "13": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "14": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "15": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "16": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "17": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "18": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "19": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "20": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0
+        }
+      },
+      "21": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 40.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      },
+      "22": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "23": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "24": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "IsHidden": true
+        }
+      },
+      "25": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "IsHidden": true
+        }
+      },
+      "26": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "IsHidden": true
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      24,
+      25,
+      26
+    ],
+    "Count": 27,
+    "DefaultSize": 40.0
+  },
+  "Cols": {
+    "RowColumnAttachedInfos": {
+      "0": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "38": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "45": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 61.0,
+          "IsHidden": true
+        }
+      },
+      "56": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      }
+    },
+    "InLogicalVisibleIndexes": [
+      45
+    ],
+    "Count": 57
+  },
+  "Values": {
+    "1,1": 0,
+    "4,1": "应交发票金额",
+    "4,16": "发票统计",
+    "7,1": "已交发票列表",
+    "7,51": "上传发票",
+    "9,46": "编辑",
+    "9,51": "删除",
+    "10,46": "编辑",
+    "10,51": "删除",
+    "24,1": "本月",
+    "26,1": "选择月份合计",
+    "26,13": "百分比",
+    "26,19": "缺额",
+    "26,28": "显示："
+  },
+  "Formulas": {
+    "24,3": "DATE(YEAR(TODAY()),MONTH(TODAY()),1)",
+    "26,16": "G27/H5*100",
+    "26,6": "SUM(M11)",
+    "26,21": "H5-G27",
+    "4,21": "IFERROR(IF(Q27>100,100,Q27),0)",
+    "26,31": "IF(V5=100,\"完成\",\"差额：\"&V27&\"元\")"
+  },
+  "AttachInfos": {
+    "1,1": {
+      "CellType": {
+        "$type": "Forguncy.RadioGroupCellType, ServerDesignerCommon",
+        "Style": 3,
+        "PrimaryColor": "Accent 2 0",
+        "CellDefaultValue": 0,
+        "ItemSpace": 0,
+        "Items": [
+          {
+            "Value": "0",
+            "DisplayValue": "本月"
+          },
+          {
+            "Value": "-1",
+            "DisplayValue": "上月"
+          }
+        ],
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionContextPropertyParam, ServerDesignerCommon",
+                    "contextProperty": {
+                      "Display": "值变更原因"
+                    }
+                  },
+                  "value": "userInput"
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                    "PropertyItemsList": [
+                      {
+                        "TargetCells": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=我的发票!H2"
+                        },
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=EDATE(我的发票!D25,我的发票!B2)"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "ID": "51de75b7-dc07-4f7a-8823-a1b9dbfb1c57"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "1,7": {
+      "CellType": {
+        "$type": "ElementUI.DatePickerCellType, ElementUI",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionContextPropertyParam, ServerDesignerCommon",
+                    "contextProperty": {
+                      "Display": "值变更原因"
+                    }
+                  },
+                  "value": "userInput"
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                    "ConditionAndCommandPairList": [
+                      {
+                        "Condition": {
+                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                          "param": {
+                            "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                            "cellLocations": [
+                              {
+                                "SerializeProperty": "=我的发票!H2"
+                              }
+                            ]
+                          },
+                          "value": {
+                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                            "SerializeProperty": "=我的发票!D25"
+                          }
+                        },
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                            "PropertyItemsList": [
+                              {
+                                "TargetCells": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=我的发票!B2"
+                                },
+                                "Value": "0"
+                              }
+                            ]
+                          }
+                        ],
+                        "ID": "28f0a83d-fa31-48c2-8496-5bb6af1d217f"
+                      },
+                      {
+                        "Condition": {
+                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                          "param": {
+                            "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                            "cellLocations": [
+                              {
+                                "SerializeProperty": "=我的发票!H2"
+                              }
+                            ]
+                          },
+                          "value": {
+                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                            "SerializeProperty": "=EDATE(我的发票!D25,-1)"
+                          }
+                        },
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                            "PropertyItemsList": [
+                              {
+                                "TargetCells": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=我的发票!B2"
+                                },
+                                "Value": "-1"
+                              }
+                            ]
+                          }
+                        ],
+                        "ID": "8db44db7-d53f-4144-adee-8ebe043d6613"
+                      },
+                      {
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                            "PropertyItemsList": [
+                              {
+                                "TargetCells": {
+                                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                                  "SerializeProperty": "=我的发票!B2"
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "ID": "14ec0b91-2170-461e-a7a8-bbe5995fc68e"
+                      }
+                    ]
+                  }
+                ],
+                "ID": "af91c5f3-23f2-442b-abaa-86051884e56a"
+              }
+            ]
+          },
+          {
+            "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+            "ParameterName": "当前用户选择月份应交发票信息",
+            "TableValue": {
+              "TableName": "Invoice_每月餐补记录表",
+              "TableValueType": 1,
+              "BindingInfos": [
+                {
+                  "GUID": "801083f2-248a-4dd7-9c34-e17ed70c6a96",
+                  "BindingInfo": {
+                    "TableName": "Invoice_每月餐补记录表",
+                    "ColumnName": "金额",
+                    "GUID": "a38da702-143d-4807-b303-661017ef253d"
+                  },
+                  "ColumnName": "金额"
+                }
+              ],
+              "SqlCondition": {
+                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                "SubConditions": [
+                  {
+                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                    "ColumnBindingInfo": {
+                      "TableName": "Invoice_每月餐补记录表",
+                      "ColumnName": "用户",
+                      "GUID": "aa3c5119-ae2b-4a97-a0b8-4e9a8a154313"
+                    },
+                    "Value": "%CurrentUser.UserName%"
+                  },
+                  {
+                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                    "ColumnBindingInfo": {
+                      "TableName": "Invoice_每月餐补记录表",
+                      "ColumnName": "月份",
+                      "GUID": "e659e6ca-fd89-4a47-927a-0ee6b63ecb03"
+                    },
+                    "Value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=我的发票!H2"
+                    }
+                  },
+                  {
+                    "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                    "ColumnBindingInfo": {
+                      "TableName": "Invoice_每月餐补记录表",
+                      "ColumnName": "公司代码",
+                      "GUID": "09cea1d1-7f15-4386-a8a6-c66aa5a8dfc1"
+                    },
+                    "Value": "%CurrentUser.公司代码%"
+                  }
+                ]
+              },
+              "TopCount": "1"
+            },
+            "ID": "563f3f62148b4d0ebbcc9c29db3de6d1"
+          },
+          {
+            "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+            "PropertyItemsList": [
+              {
+                "TargetCells": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=我的发票!H5"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=我的发票!当前用户选择月份应交发票信息.金额"
+                }
+              }
+            ]
+          }
+        ],
+        "UIPermissions": [
+          {
+            "Scope": 2,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Scope": 1,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Scope": 4,
+            "AllowRoles": [
+              "FGC_Anonymous"
+            ]
+          }
+        ],
+        "DefaultValue": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=我的发票!D25"
+        },
+        "type": "month",
+        "startPlaceholder": "开始日期",
+        "rangeSeparator": "至",
+        "endPlaceholder": "结束日期",
+        "format": "yyyy年M月",
+        "firstDayOfWeek": 1,
+        "DefautWeekFormat": "yyyy 第 WW 周"
+      }
+    },
+    "4,21": {
+      "CellType": {
+        "$type": "ElementUI.ProgressCellType, ElementUI",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "=我的发票!V5"
+                      }
+                    ]
+                  },
+                  "value": "50",
+                  "compareType": 4
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.OperateCellTypeCommand, ServerDesignerCommon",
+                    "TargetPageElement": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=我的发票!V5"
+                    },
+                    "TargetType": "ElementUI.ProgressCellType, ElementUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e50995ee76bfe560",
+                    "MethodName": "SetBackgroundColor",
+                    "ParameterValues": {
+                      "color": "Accent 3 0"
+                    }
+                  },
+                  {
+                    "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+                    "PropertyItemsList": [
+                      {
+                        "TargetCells": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=我的发票!V5"
+                        },
+                        "PropertyType": 3,
+                        "Value": "Accent 2 0"
+                      }
+                    ]
+                  }
+                ],
+                "ID": "a4a1974f-6e5f-46f9-93fe-5f56f5d653f2"
+              },
+              {
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.OperateCellTypeCommand, ServerDesignerCommon",
+                    "TargetPageElement": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=我的发票!V5"
+                    },
+                    "TargetType": "ElementUI.ProgressCellType, ElementUI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e50995ee76bfe560",
+                    "MethodName": "SetBackgroundColor",
+                    "ParameterValues": {
+                      "color": "Accent 2 0"
+                    }
+                  }
+                ],
+                "ID": "d703b00c-d919-48b3-af61-5a9b6b3a090c"
+              }
+            ]
+          }
+        ],
+        "strokeWidth": 30.0,
+        "color": "Accent 2 0",
+        "textInside": true,
+        "textFormula": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=我的发票!AF27"
+        }
+      }
+    },
+    "7,51": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+            "PopupDisplayMode": 3,
+            "DrawerDirection": 3,
+            "PageName": "上传发票",
+            "PassValues": [
+              {
+                "Source": "上传",
+                "TargetCell": {
+                  "SerializeProperty": "=上传发票!P25"
+                }
+              }
+            ],
+            "LoadBindingDataOption": 2
+          }
+        ],
+        "Text": "上传发票",
+        "TemplateKey": "样式2"
+      }
+    },
+    "9,1": {
+      "ListViewInfo": {
+        "Name": "表格1",
+        "TableName": "Invoice_实缴发票记录表",
+        "RowIndex": 9,
+        "ColumnIndex": 1,
+        "RowCount": 13,
+        "ColumnCount": 55,
+        "SqlCondition": {
+          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+          "SubConditions": [
+            {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "CompareType": 3,
+              "ColumnBindingInfo": {
+                "TableName": "Invoice_实缴发票记录表",
+                "ColumnName": "月份",
+                "GUID": "1c4f6626-aba4-4c79-a52a-77134eae0d60"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=我的发票!H2"
+              }
+            },
+            {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "CompareType": 4,
+              "ColumnBindingInfo": {
+                "TableName": "Invoice_实缴发票记录表",
+                "ColumnName": "月份",
+                "GUID": "320a9e30-8851-4573-bcc5-c13df25accfa"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=EDATE(我的发票!H2,1)"
+              }
+            },
+            {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "Invoice_实缴发票记录表",
+                "ColumnName": "用户",
+                "GUID": "aef90c37-544f-4f71-9230-1de45c838569"
+              },
+              "Value": "%CurrentUser.UserName%"
+            },
+            {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "Invoice_实缴发票记录表",
+                "ColumnName": "公司代码",
+                "GUID": "3154b72f-6fc9-4cb5-8239-8a519b7db055"
+              },
+              "Value": "%CurrentUser.公司代码%"
+            }
+          ]
+        },
+        "OrderByCondition": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "Invoice_实缴发票记录表",
+                "ColumnName": "FGC_LastModifyDate",
+                "GUID": "4bf8d101-91de-44b9-9660-1342722c5801"
+              },
+              "Order": 1
+            }
+          ]
+        },
+        "TopCondition": null,
+        "ListViewStyleName": "_RS_Light10",
+        "ShowColumnHeaderInDesigner": true,
+        "IsTotalRowVisible": true,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true
+      }
+    },
+    "10,1": {
+      "TotalRowSetting": {
+        "StaticText": "合计金额",
+        "StyleInfo": {
+          "TextIndent": 10
+        }
+      },
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "月份",
+        "GUID": "be81c8d4-7569-4bde-942c-14a58bab3945"
+      }
+    },
+    "10,12": {
+      "TotalRowSetting": {
+        "FormulaType": 5,
+        "StyleInfo": {
+          "FontWeight": "Bold",
+          "HorizontalAlignment": 2,
+          "TextIndent": 35,
+          "Foreground": "Accent 2 0",
+          "Formatter": " ¥#,##0.00;[Red] ¥-#,##0.00"
+        }
+      },
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "金额",
+        "GUID": "e83c6d2c-a86d-4a26-b9ba-250a3607df4d"
+      }
+    },
+    "10,20": {
+      "TotalRowSetting": {},
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "发票类型",
+        "GUID": "c5c2dd08-a038-4bf0-b1cf-0466ae28f5ec"
+      }
+    },
+    "10,27": {
+      "TotalRowSetting": {},
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "备注",
+        "GUID": "2e041d4e-05fb-4431-9468-e2d65aa3b4c1"
+      }
+    },
+    "10,45": {
+      "TotalRowSetting": {},
+      "BindingInfo": {
+        "TableName": "Invoice_实缴发票记录表",
+        "ColumnName": "ID",
+        "GUID": "7af61e64-a371-41e8-b4d4-fbeda04b2fd5"
+      }
+    },
+    "10,46": {
+      "TotalRowSetting": {},
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+            "PopupDisplayMode": 3,
+            "DrawerDirection": 3,
+            "PageName": "上传发票",
+            "PassValues": [
+              {
+                "Source": "保存",
+                "TargetCell": {
+                  "SerializeProperty": "=上传发票!P25"
+                }
+              }
+            ],
+            "LoadBindingDataOption": 1
+          }
+        ],
+        "Text": "编辑",
+        "ClickMode": 1
+      }
+    },
+    "10,51": {
+      "TotalRowSetting": {},
+      "CellType": {
+        "$type": "Forguncy.HyperlinkCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "ConfirmDialogSettings": {
+                  "Title": "确认",
+                  "FormulaText": "您确定执行此操作吗？",
+                  "YesButtonText": "是",
+                  "NoButtonText": "否",
+                  "ConfirmIcon": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                    "ServerCommandName": "删除发票",
+                    "Parameters": [
+                      {
+                        "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                        "ParamName": "发票ID",
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=我的发票!AT11"
+                        }
+                      }
+                    ],
+                    "ResultErrorCodeTo": {
+                      "SerializeProperty": "返回码"
+                    },
+                    "ResultMessageTo": {
+                      "SerializeProperty": "返回信息"
+                    },
+                    "RefreshAfterFinish": true,
+                    "CheckDataValidation": true
+                  },
+                  {
+                    "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                    "ConditionAndCommandPairList": [
+                      {
+                        "Condition": {
+                          "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                          "param": {
+                            "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                            "cellLocations": [
+                              {
+                                "SerializeProperty": "=我的发票!返回码"
+                              }
+                            ]
+                          },
+                          "value": "0"
+                        },
+                        "CommandList": [
+                          {
+                            "$type": "ElementUI.Commands.ShowMessage, ElementUI",
+                            "Message": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=我的发票!返回信息"
+                            },
+                            "Type": "success",
+                            "Duration": 3000,
+                            "Offset": null
+                          }
+                        ],
+                        "ID": "31697025-6c5b-4fd1-acd1-d691359fc3af"
+                      },
+                      {
+                        "CommandList": [
+                          {
+                            "$type": "ElementUI.Commands.ShowMessage, ElementUI",
+                            "Message": {
+                              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                              "SerializeProperty": "=我的发票!返回信息"
+                            },
+                            "Type": "error",
+                            "Duration": 3000,
+                            "Offset": null
+                          }
+                        ],
+                        "ID": "a2ec6e10-8fd8-483f-9187-06bbb9f97570"
+                      }
+                    ]
+                  }
+                ],
+                "ID": "f9fe0b66-5c32-4160-a1a6-0cf6bb996c7c"
+              }
+            ]
+          }
+        ],
+        "Text": "删除",
+        "ClickMode": 1
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontFamily": 0
+      },
+      {
+        "FontFamily": 0,
+        "BorderBottom": 0
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 2,
+        "HorizontalAlignment": 3,
+        "BorderBottom": 0
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 2,
+        "Formatter": 4,
+        "HorizontalAlignment": 3,
+        "BorderBottom": 0
+      },
+      {
+        "FontFamily": 0,
+        "FontSize": 14.666666666666666,
+        "BorderBottom": 0
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 2,
+        "Formatter": 4,
+        "TextIndent": 5,
+        "HorizontalAlignment": 5,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "FontSize": 14.666666666666666,
+        "FontWeight": 6,
+        "Foreground": 7,
+        "Formatter": 8,
+        "HorizontalAlignment": 3
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 2,
+        "Formatter": 4,
+        "HorizontalAlignment": 3,
+        "BorderBottom": null,
+        "BorderTop": null,
+        "BorderLeft": null,
+        "BorderRight": null
+      },
+      {
+        "FontFamily": 0,
+        "FontSize": 13.333333333333332
+      },
+      {
+        "BorderBottom": 0
+      },
+      {
+        "Foreground": 2,
+        "TextIndent": 5,
+        "HorizontalAlignment": 5
+      },
+      {
+        "TextIndent": 5,
+        "HorizontalAlignment": 5
+      },
+      {
+        "TextIndent": 35,
+        "HorizontalAlignment": 9
+      },
+      {
+        "HorizontalAlignment": 3
+      },
+      {
+        "Formatter": 10,
+        "TextIndent": 5,
+        "HorizontalAlignment": 5
+      },
+      {
+        "Formatter": 8,
+        "TextIndent": 35,
+        "HorizontalAlignment": 9
+      },
+      {
+        "FontFamily": 0,
+        "TextIndent": 5,
+        "HorizontalAlignment": 5
+      },
+      {
+        "Foreground": 11,
+        "HorizontalAlignment": 3,
+        "Underline": true
+      },
+      {
+        "FontFamily": 0,
+        "Formatter": 4
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Body",
+        "#FFDCDFE6",
+        "Text 1 15",
+        "Center",
+        "[AUTO]General",
+        "Left",
+        "Bold",
+        "Background 1 0",
+        " ¥#,##0.00;[Red] ¥-#,##0.00",
+        "Right",
+        "yyyy\"年\"m\"月\"",
+        "Accent 2 0"
+      ],
+      "Borders": [
+        {
+          "Color": 1
+        }
+      ]
+    },
+    "CellStyles": {
+      "1,1": 0,
+      "1,2": 0,
+      "1,3": 0,
+      "1,4": 0,
+      "1,5": 0,
+      "1,6": 0,
+      "1,7": 0,
+      "1,8": 0,
+      "1,9": 0,
+      "1,10": 0,
+      "1,11": 0,
+      "1,12": 0,
+      "1,13": 0,
+      "1,14": 0,
+      "2,1": 1,
+      "2,2": 1,
+      "2,3": 1,
+      "2,4": 1,
+      "2,5": 1,
+      "2,6": 1,
+      "2,7": 1,
+      "2,8": 1,
+      "2,9": 1,
+      "2,10": 1,
+      "2,11": 1,
+      "2,12": 1,
+      "2,13": 1,
+      "2,14": 1,
+      "2,15": 1,
+      "2,16": 2,
+      "2,17": 2,
+      "2,18": 2,
+      "2,19": 2,
+      "2,20": 2,
+      "2,21": 2,
+      "2,22": 2,
+      "2,23": 2,
+      "2,24": 1,
+      "2,25": 1,
+      "2,26": 1,
+      "2,27": 1,
+      "2,28": 1,
+      "2,29": 3,
+      "2,30": 3,
+      "2,31": 3,
+      "2,32": 3,
+      "2,33": 3,
+      "2,34": 3,
+      "2,35": 3,
+      "2,36": 3,
+      "2,37": 3,
+      "2,38": 3,
+      "2,39": 1,
+      "2,40": 4,
+      "2,41": 4,
+      "2,42": 4,
+      "2,43": 4,
+      "2,44": 4,
+      "2,45": 4,
+      "2,46": 4,
+      "2,47": 4,
+      "2,48": 4,
+      "2,49": 4,
+      "2,50": 4,
+      "2,51": 4,
+      "2,52": 4,
+      "2,53": 4,
+      "2,54": 4,
+      "2,55": 1,
+      "4,1": 5,
+      "4,2": 6,
+      "4,3": 6,
+      "4,4": 6,
+      "4,5": 6,
+      "4,6": 6,
+      "4,7": 7,
+      "4,16": 8,
+      "4,17": 6,
+      "4,18": 6,
+      "4,19": 6,
+      "4,21": 9,
+      "5,1": 1,
+      "5,2": 1,
+      "5,3": 1,
+      "5,4": 1,
+      "5,5": 1,
+      "5,6": 1,
+      "5,7": 1,
+      "5,8": 1,
+      "5,9": 1,
+      "5,10": 1,
+      "5,11": 1,
+      "5,12": 1,
+      "5,13": 1,
+      "5,14": 1,
+      "5,15": 1,
+      "5,16": 1,
+      "5,17": 1,
+      "5,18": 1,
+      "5,19": 1,
+      "5,20": 1,
+      "5,21": 1,
+      "5,22": 1,
+      "5,23": 1,
+      "5,24": 1,
+      "5,25": 1,
+      "5,26": 1,
+      "5,27": 1,
+      "5,28": 1,
+      "5,29": 1,
+      "5,30": 1,
+      "5,31": 3,
+      "5,32": 3,
+      "5,33": 3,
+      "5,34": 3,
+      "5,35": 3,
+      "5,36": 3,
+      "5,37": 3,
+      "5,38": 3,
+      "5,39": 10,
+      "5,40": 4,
+      "5,41": 4,
+      "5,42": 4,
+      "5,43": 4,
+      "5,44": 4,
+      "5,45": 4,
+      "5,46": 4,
+      "5,47": 4,
+      "5,48": 4,
+      "5,49": 4,
+      "5,50": 4,
+      "5,51": 4,
+      "5,52": 4,
+      "5,53": 4,
+      "5,54": 4,
+      "5,55": 10,
+      "6,1": 0,
+      "6,2": 0,
+      "6,3": 0,
+      "6,4": 0,
+      "6,5": 0,
+      "6,6": 0,
+      "6,7": 0,
+      "6,8": 0,
+      "6,9": 0,
+      "6,10": 0,
+      "6,11": 0,
+      "6,51": 0,
+      "6,52": 0,
+      "6,53": 0,
+      "6,54": 0,
+      "6,55": 0,
+      "7,1": 11,
+      "7,28": 0,
+      "7,29": 0,
+      "7,30": 0,
+      "7,31": 0,
+      "7,32": 0,
+      "7,33": 0,
+      "7,34": 0,
+      "7,35": 0,
+      "7,36": 0,
+      "7,37": 0,
+      "7,38": 0,
+      "7,39": 0,
+      "7,40": 0,
+      "7,41": 0,
+      "7,42": 0,
+      "7,43": 0,
+      "7,44": 0,
+      "7,45": 0,
+      "7,46": 0,
+      "7,47": 0,
+      "7,48": 0,
+      "7,49": 0,
+      "7,50": 0,
+      "7,51": 0,
+      "7,52": 0,
+      "7,53": 0,
+      "7,54": 0,
+      "7,55": 0,
+      "9,1": 12,
+      "9,12": 13,
+      "9,20": 12,
+      "9,27": 12,
+      "9,45": 12,
+      "9,46": 14,
+      "9,51": 14,
+      "10,1": 15,
+      "10,12": 16,
+      "10,20": 12,
+      "10,27": 17,
+      "10,46": 18,
+      "10,51": 18,
+      "10,52": 18,
+      "26,1": 19,
+      "26,2": 0,
+      "26,3": 0,
+      "26,4": 0,
+      "26,5": 0,
+      "26,6": 0,
+      "26,7": 0,
+      "26,8": 0,
+      "26,9": 0,
+      "26,10": 0,
+      "26,11": 0,
+      "26,12": 0,
+      "26,13": 0,
+      "26,19": 19,
+      "26,20": 0,
+      "26,21": 0,
+      "26,24": 0,
+      "26,25": 0,
+      "26,26": 0,
+      "26,28": 19,
+      "26,29": 0,
+      "26,30": 0,
+      "26,31": 0,
+      "26,38": 0,
+      "26,39": 0,
+      "26,40": 0,
+      "26,41": 0,
+      "26,42": 0
+    },
+    "SheetStyle": {
+      "FontFamily": 0
+    }
+  },
+  "Spans": [
+    "24,3,1,6",
+    "26,6,1,6",
+    "7,51,1,5",
+    "1,1,1,6",
+    "1,7,1,8",
+    "4,1,1,6",
+    "4,7,1,8",
+    "4,16,1,4",
+    "26,31,1,12",
+    "26,21,1,6",
+    "26,16,1,2",
+    "10,1,1,11",
+    "10,12,1,8",
+    "10,46,1,5",
+    "10,51,1,5",
+    "10,27,1,18",
+    "10,20,1,7",
+    "11,1,11,55",
+    "4,21,1,35",
+    "9,1,1,11",
+    "9,12,1,8",
+    "9,20,1,7",
+    "9,27,1,18",
+    "9,46,1,5",
+    "9,51,1,5"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "MasterPageName": "母版页",
+    "MobilePageName": "我的发票手机页",
+    "PageLoadedCommandList": [
+      {
+        "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+        "ParameterName": "当前用户选择月份应交发票信息",
+        "TableValue": {
+          "TableName": "Invoice_每月餐补记录表",
+          "TableValueType": 1,
+          "BindingInfos": [
+            {
+              "GUID": "77daeb0a-654f-4120-8e76-bd9704c2f724",
+              "BindingInfo": {
+                "TableName": "Invoice_每月餐补记录表",
+                "ColumnName": "金额",
+                "GUID": "fd20fa26-3dc3-4a77-82c4-5344b48ac9ea"
+              },
+              "ColumnName": "金额"
+            }
+          ],
+          "SqlCondition": {
+            "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+            "SubConditions": [
+              {
+                "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                "ColumnBindingInfo": {
+                  "TableName": "Invoice_每月餐补记录表",
+                  "ColumnName": "用户",
+                  "GUID": "41905da2-df28-499f-bc7a-f7ee68536bf6"
+                },
+                "Value": "%CurrentUser.UserName%"
+              },
+              {
+                "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                "ColumnBindingInfo": {
+                  "TableName": "Invoice_每月餐补记录表",
+                  "ColumnName": "月份",
+                  "GUID": "da3f562a-b912-4c54-8143-32f690e13883"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=我的发票!H2"
+                }
+              },
+              {
+                "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                "ColumnBindingInfo": {
+                  "TableName": "Invoice_每月餐补记录表",
+                  "ColumnName": "公司代码",
+                  "GUID": "0d296cd5-86ad-4ada-8d91-b7d8a7c47302"
+                },
+                "Value": "%CurrentUser.公司代码%"
+              }
+            ]
+          },
+          "TopCount": "1"
+        },
+        "ID": "3be04a5895f447e1b32f099f2545a762"
+      },
+      {
+        "$type": "Forguncy.Model.SetCellPropertyCommand, ServerDesignerCommon",
+        "PropertyItemsList": [
+          {
+            "TargetCells": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=我的发票!H5"
+            },
+            "Value": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=我的发票!当前用户选择月份应交发票信息.金额"
+            }
+          }
+        ]
+      }
+    ],
+    "PermissionData": {
+      "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionData, Forguncy.RbacPermission.Core",
+      "permissionResource": {
+        "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionResource, Forguncy.RbacPermission.Core"
+      },
+      "permissionBindings": [
+        {
+          "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionBinding, Forguncy.RbacPermission.Core",
+          "roleNames": [
+            "FGC_LoginUser",
+            "Administrator",
+            "餐补组"
+          ]
+        }
+      ]
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "PaperSize": {},
+    "Margin": {}
+  },
+  "BackgroundPictures": [
+    {
+      "Name": "BackgroundPicture1",
+      "DisplayName": "背景图2",
+      "StyleInfo": {
+        "CornerRadius": 16.0,
+        "Fill": "Accent 2 0"
+      },
+      "IsAutomaticFill": false,
+      "Location": "140,98",
+      "Size": "160,30"
+    }
+  ]
+}//lbEjrjJYlMWduSbOW8FT3zjCYL0cLmtXEnMTe8iw3EipUQcXZP3dSUl3kop99pF0fhfRLrEQwvgeaHS7XYoeMAQuQlmGWYHPM+kyZVjaahdkE7hxH8sgdegu1638kfL+bQhBy6gfJEaKoh6CjalaQ74rwxQNNTv+L8Lt35bO+aFhm1+YeUAx0f8UjzSZtqQy5wRHfhZLXpIp5KSKnPsWVINccfp14ag59fPxD+57acMCBoY2X6TCHQZGHogP2AgMIm9F204okSx9NLfsNpA+vgj91kTN7C0Nlk2yFa4+YejQT2tcSkbKdwOXMJqDGd/Gtv3ER6zVnA+coefMelJKnhNPsJBlJEXc1dyOL2QyqvwCCrP/Q5vsxBnyB7XuaEfAYu4ciJ+aDcDcIdPkS9pseQXiZL7pqgFx+z/iNal5u3b1WtCVtQvUBb/IVrSo6WiFJXHfqjDmgitae89OK16v4xQws0mR0vtnDLmF8A4qn54oJgBevev3aHuzguKGvBqtXSS5JSVE9GmsAF3/+2rT8l6RvvgBnBA2jA4NQmF/RIEKUhkPurHtJQMf4a4t754YrMB+HPOqwWYbtm1APwe0WaIdQ9kakkZdQdKtZrrSuGLcEPLgbPJZBnFIdtO8KB1CIFJ9ceAXSxXFudiMvEDr7Ju9mFwYoWTagfmlEoFrR1h5NtwEzHFKD5G7Kf9TFIOcI3xmbqKsMsgcdiI55oKg6pROPmMr6N8HnFMiebbmVUJCFjPESbvLop5OKJpqj1/Hg5ZvZxq0PxTc56Kgt31pDK/f58p+IeArmO/PoSPx2zOSbYIFQ3A/ErJJH9FXEWh6tTMxTcWRsaY6iuNBbDk6StRFPL0dUicDSoX5Xfo3AAzOq3RHQG2f0b3Uk1dHFmVHApk03sqf73ZrNzs3ZEjzkw==|920

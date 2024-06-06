@@ -1,0 +1,81 @@
+{
+  "Name": "setCompany",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser",
+                "FGC_Anonymous"
+              ]
+            }
+          ]
+        }
+      },
+      "HttpMethod": 2
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+      "TableName": "Invoice_每月餐补记录表",
+      "ShowConfirm": false,
+      "RowsToUpdate": 1,
+      "RowsToUpdateCondition": {
+        "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+        "CompareType": 2,
+        "ColumnBindingInfo": {
+          "TableName": "Invoice_每月餐补记录表",
+          "ColumnName": "ID",
+          "GUID": "b338785f-a8db-4a44-b43b-ee463b72d264"
+        },
+        "Value": "0"
+      },
+      "UpdateBindingValues": [
+        {
+          "BindingInfo": {
+            "TableName": "Invoice_每月餐补记录表",
+            "ColumnName": "公司代码",
+            "GUID": "2f228c15-ee6a-48bd-885f-21a656df49fd"
+          },
+          "Value": "gc"
+        }
+      ]
+    },
+    {
+      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+      "TableName": "Invoice_实缴发票记录表",
+      "ShowConfirm": false,
+      "RowsToUpdate": 1,
+      "RowsToUpdateCondition": {
+        "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+        "CompareType": 2,
+        "ColumnBindingInfo": {
+          "TableName": "Invoice_实缴发票记录表",
+          "ColumnName": "ID",
+          "GUID": "65f7442e-83d1-403e-8850-f9ab41757989"
+        },
+        "Value": "0"
+      },
+      "UpdateBindingValues": [
+        {
+          "BindingInfo": {
+            "TableName": "Invoice_实缴发票记录表",
+            "ColumnName": "公司代码",
+            "GUID": "2218e8e9-de5f-42b8-94e0-ff9f42800fc7"
+          },
+          "Value": "gc"
+        }
+      ]
+    }
+  ]
+}

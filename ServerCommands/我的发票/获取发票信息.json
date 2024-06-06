@@ -1,0 +1,278 @@
+{
+  "Name": "获取发票信息",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser"
+              ]
+            }
+          ]
+        }
+      },
+      "Parameters": [
+        {
+          "Name": "发票",
+          "DataValidationInfo": {}
+        }
+      ]
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "BaiduAI.BaiduAICommand, BaiduAI",
+      "APIKey": "VcxQ3ZFYVOoQcHIsUyYQlO1F",
+      "SecretKey": "92LvWDohg0RggqX3QdozBRuZLDvGdcBD",
+      "OperationType": 5,
+      "OperationParams": {
+        "$type": "BaiduAI.APIs.Ocr.OcrVatInvoiceSetting, BaiduAI",
+        "file_image": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=发票"
+        },
+        "advancedSettings": {
+          "$type": "BaiduAI.APIs.Ocr.VatInvoiceAdvancedSetting, BaiduAI",
+          "BaiduAIResponse": true
+        }
+      },
+      "ReturnParam": "识别结果"
+    },
+    {
+      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+      "ParameterName": "发票省份",
+      "ParameterValue": {
+        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+        "SerializeProperty": "=识别结果.省"
+      },
+      "ID": "21613615535947428358a5fa6cab1d29"
+    },
+    {
+      "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+      "ConditionAndCommandPairList": [
+        {
+          "Condition": {
+            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+            "param": {
+              "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+              "ParamObject": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=发票省份"
+              }
+            },
+            "value": "陕西省",
+            "compareType": 1
+          },
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+              "ConditionAndCommandPairList": [
+                {
+                  "Condition": {
+                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                    "param": {
+                      "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                      "ParamObject": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=识别结果.发票号码"
+                      }
+                    },
+                    "value": "__61%",
+                    "compareType": 14
+                  },
+                  "CommandList": [
+                    {
+                      "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                      "ParameterName": "发票省份",
+                      "ParameterValue": "陕西省",
+                      "ID": "0f322660ccf24e0fb53d60ee6caeccfe"
+                    }
+                  ],
+                  "ID": "aae94498-73ee-4dd2-8e75-08d2ea65267f"
+                },
+                {
+                  "CommandList": [
+                    {
+                      "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                      "ErrorCode": "333",
+                      "Message": "发票的省份必须是陕西省。",
+                      "CustomReturns": [
+                        {
+                          "ReturnPropertyName": "公司"
+                        },
+                        {
+                          "ReturnPropertyName": "地区"
+                        },
+                        {
+                          "ReturnPropertyName": "金额"
+                        }
+                      ]
+                    }
+                  ],
+                  "ID": "a0c033fb-3979-42ae-a879-9d05aaa97875"
+                }
+              ]
+            }
+          ],
+          "ID": "036bdb0c-5a7f-49fb-8925-a77dfb0aaf2e"
+        }
+      ],
+      "Comments": "目前新版发票无法识别省份"
+    },
+    {
+      "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+      "ConditionAndCommandPairList": [
+        {
+          "Condition": {
+            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+            "param": {
+              "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+              "ParamObject": "%CurrentUser.公司代码%"
+            },
+            "value": "gc"
+          },
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+              "ConditionAndCommandPairList": [
+                {
+                  "Condition": {
+                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                    "param": {
+                      "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                      "ParamObject": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=识别结果.购方.名称"
+                      }
+                    },
+                    "value": "西安葡萄城信息技术有限公司",
+                    "compareType": 11
+                  },
+                  "CommandList": [
+                    {
+                      "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                      "ErrorCode": "201",
+                      "Message": "发票的抬头必须是西安葡萄城信息技术有限公司。",
+                      "CustomReturns": [
+                        {
+                          "ReturnPropertyName": "公司"
+                        },
+                        {
+                          "ReturnPropertyName": "地区"
+                        },
+                        {
+                          "ReturnPropertyName": "金额",
+                          "Value": {
+                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                            "SerializeProperty": "=识别结果.价税合计_小写"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "ID": "9f916ec6-4560-4824-bfd7-b9fa93ee624e"
+                }
+              ]
+            }
+          ],
+          "ID": "57004bbc-2bc0-41d7-ad7a-3c8ee208449b"
+        },
+        {
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+              "ConditionAndCommandPairList": [
+                {
+                  "Condition": {
+                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                    "param": {
+                      "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                      "ParamObject": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=识别结果.购方.名称"
+                      }
+                    },
+                    "value": "西安葡萄城软件有限公司",
+                    "compareType": 11
+                  },
+                  "CommandList": [
+                    {
+                      "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                      "ErrorCode": "201",
+                      "Message": "发票的抬头必须是西安葡萄城软件有限公司。",
+                      "CustomReturns": [
+                        {
+                          "ReturnPropertyName": "公司"
+                        },
+                        {
+                          "ReturnPropertyName": "地区"
+                        },
+                        {
+                          "ReturnPropertyName": "金额",
+                          "Value": {
+                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                            "SerializeProperty": "=识别结果.价税合计_小写"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "ID": "52cc90dc-207e-433b-bb57-b29beafebf67"
+                }
+              ]
+            }
+          ],
+          "ID": "23771712-9648-4679-823e-de14cf09e15e"
+        }
+      ]
+    },
+    {
+      "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+      "ErrorCode": "0",
+      "Message": "success",
+      "CustomReturns": [
+        {
+          "ReturnPropertyName": "公司",
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=识别结果.购方.名称"
+          }
+        },
+        {
+          "ReturnPropertyName": "地区",
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=发票省份"
+          }
+        },
+        {
+          "ReturnPropertyName": "金额",
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=识别结果.价税合计_小写"
+          }
+        }
+      ]
+    }
+  ],
+  "ReturnProperties": [
+    {
+      "Name": "公司"
+    },
+    {
+      "Name": "地区"
+    },
+    {
+      "Name": "金额"
+    }
+  ]
+}

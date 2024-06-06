@@ -1,0 +1,63 @@
+{
+  "Name": "年底清空数据",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+      "TableName": "Invoice_每月餐补记录表",
+      "UpdateType": "delete",
+      "ShowConfirm": true,
+      "ConfirmText": "您确定要删除吗？",
+      "RowsToUpdate": 1,
+      "RowsToUpdateCondition": {
+        "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+        "CompareType": 2,
+        "ColumnBindingInfo": {
+          "TableName": "Invoice_每月餐补记录表",
+          "ColumnName": "ID",
+          "GUID": "92f10ae7-8742-47ca-a899-8b95bef2882f"
+        },
+        "Value": "0"
+      }
+    },
+    {
+      "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+      "TableName": "Invoice_实缴发票记录表",
+      "UpdateType": "delete",
+      "ShowConfirm": true,
+      "ConfirmText": "您确定要删除吗？",
+      "RowsToUpdate": 1,
+      "RowsToUpdateCondition": {
+        "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+        "CompareType": 2,
+        "ColumnBindingInfo": {
+          "TableName": "Invoice_实缴发票记录表",
+          "ColumnName": "ID",
+          "GUID": "3b117eab-ae9c-4d54-ac5d-d5c5f4067cc9"
+        },
+        "Value": "0"
+      }
+    }
+  ]
+}

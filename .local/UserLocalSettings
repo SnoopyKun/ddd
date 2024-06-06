@@ -1,0 +1,79 @@
+{
+  "ActiveSheetName": "我的发票",
+  "CommandDialogSettings": {},
+  "DialogSettings": {},
+  "LocalSheetSettings": {
+    "我的发票": {
+      "IsOpen": true,
+      "Selections": [
+        "9,1,13,55"
+      ]
+    }
+  },
+  "PageFolderWeights": {
+    "Pages\\内建手机页面": 1,
+    "FGC_401页面_手机版": 1,
+    "FGC_维护中_手机版": 2,
+    "FGC_连接已断开_手机版": 3,
+    "FGC_邮件订阅_手机版": 4,
+    "Pages\\内建页面": 2,
+    "FGC_维护中": 1,
+    "FGC_连接已断开": 2,
+    "FGC_401页面": 3,
+    "FGC_邮件订阅": 4,
+    "我的发票": 3,
+    "上传发票": 4,
+    "内部表页面": 5,
+    "餐补记录": 6,
+    "我的发票手机页": 7,
+    "发票下载": 8,
+    "添加用户": 9,
+    "发票管理": 10
+  },
+  "SuppressedWarnings": [],
+  "ServerCommandFolderWeights": {
+    "ServerCommands\\发票管理": 1,
+    "手动为未集齐发票的所有用户推送邮件": 1,
+    "为未集齐发票的所有用户推送邮件": 2,
+    "手动为未集齐发票的特定用户推送邮件": 3,
+    "setCompany": 4,
+    "为未集齐发票的特定用户推送邮件": 5,
+    "年底清空数据": 6,
+    "ServerCommands\\发票上交": 2,
+    "添加用户": 1,
+    "打包下载符合条件的pdf电子发票": 2,
+    "获取打印发票列表": 3,
+    "标记发票已打印": 4,
+    "ServerCommands\\我的发票": 3,
+    "结转当前用户上传月份及其后续月份的发票金额": 1,
+    "获取发票信息": 2,
+    "结转所有用户上传月份及其后续月份的发票金额": 3,
+    "结转特定用户的发票金额": 4,
+    "上传发票": 5,
+    "结转特定用户上传月份及其后续月份的发票金额": 6,
+    "删除发票": 7,
+    "修改发票": 8
+  },
+  "TaskSchedulerFolderWeights": {
+    "月底推送上交发票通知": 1,
+    "同步每月发票是否集齐": 2
+  },
+  "TableFolderWeights": {
+    "用户信息视图": 1,
+    "Invoice_发票公司": 2,
+    "Invoice_实缴发票记录表": 3,
+    "Invoice_餐补报销方式": 4,
+    "Invoice_每月餐补记录表": 5
+  },
+  "MasterPageFolderWeights": {
+    "母版页": 1,
+    "FGC_母版页": 2
+  },
+  "ImageFolderWeights": {
+    "image\\内置图片": 1,
+    "fgc_loading.gif": 1,
+    "fgc_logo_dark.png": 2,
+    "fgc_logo_light.png": 3,
+    "fgc_built_in_page_disconnected.png": 4
+  }
+}

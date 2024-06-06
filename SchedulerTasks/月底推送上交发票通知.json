@@ -1,0 +1,46 @@
+{
+  "Name": "月底推送上交发票通知",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.MonthlyAndDaysOfMonthScheduleTriggerSaveData, ServerDesignerCommon",
+      "DaysOfMonth": [
+        0
+      ],
+      "Months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "StartDateTime": 44620.0,
+      "ScheduleRunInDebugServer": false
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+      "ServerCommandName": "为未集齐发票的所有用户推送邮件",
+      "Parameters": [
+        {
+          "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+          "ParamName": "月份",
+          "Value": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=DATE(YEAR(TODAY()),MONTH(TODAY()),1)"
+          }
+        }
+      ],
+      "RefreshAfterFinish": true,
+      "CheckDataValidation": true
+    }
+  ]
+}

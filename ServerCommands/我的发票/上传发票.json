@@ -1,0 +1,412 @@
+{
+  "Name": "上传发票",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser"
+              ]
+            }
+          ]
+        }
+      },
+      "Parameters": [
+        {
+          "Name": "电子发票",
+          "DataValidationInfo": {}
+        },
+        {
+          "Name": "发票金额",
+          "DataValidationInfo": {
+            "IgnoreBlank": false,
+            "ErrorMessage": "发票金额不能为空"
+          }
+        },
+        {
+          "Name": "备注",
+          "DataValidationInfo": {}
+        }
+      ]
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+      "ConditionAndCommandPairList": [
+        {
+          "Condition": {
+            "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+            "param": {
+              "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+              "ParamObject": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=电子发票"
+              }
+            },
+            "value": "%Null%",
+            "compareType": 1
+          },
+          "CommandList": [
+            {
+              "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+              "ServerCommandName": "获取发票信息",
+              "Parameters": [
+                {
+                  "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                  "ParamName": "发票",
+                  "Value": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=电子发票"
+                  }
+                }
+              ],
+              "ResultErrorCodeTo": {
+                "SerializeProperty": "返回码"
+              },
+              "ResultMessageTo": {
+                "SerializeProperty": "返回信息"
+              },
+              "ReturnPropertiesTo": [
+                {
+                  "ResultPropertyName": "公司"
+                },
+                {
+                  "ResultPropertyName": "地区"
+                },
+                {
+                  "ResultPropertyName": "金额",
+                  "ResultTo": {
+                    "SerializeProperty": "计算金额"
+                  }
+                }
+              ],
+              "RefreshAfterFinish": true,
+              "CheckDataValidation": true
+            },
+            {
+              "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+              "ConditionAndCommandPairList": [
+                {
+                  "Condition": {
+                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                    "param": {
+                      "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                      "ParamObject": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=返回码"
+                      }
+                    },
+                    "value": "0",
+                    "compareType": 1
+                  },
+                  "CommandList": [
+                    {
+                      "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                      "ErrorCode": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=返回码"
+                      },
+                      "Message": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=返回信息"
+                      }
+                    }
+                  ],
+                  "ID": "3f26abda-7c9f-41b4-b2ad-3e76ef9716a0"
+                }
+              ]
+            },
+            {
+              "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+              "ConditionAndCommandPairList": [
+                {
+                  "Condition": {
+                    "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                    "SubConditions": [
+                      {
+                        "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                        "param": {
+                          "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                          "ParamObject": {
+                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                            "SerializeProperty": "=返回码"
+                          }
+                        },
+                        "value": "0"
+                      },
+                      {
+                        "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                        "param": {
+                          "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                          "ParamObject": {
+                            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                            "SerializeProperty": "=计算金额"
+                          }
+                        },
+                        "value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=发票金额"
+                        },
+                        "compareType": 1
+                      }
+                    ]
+                  },
+                  "CommandList": [
+                    {
+                      "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+                      "ErrorCode": "500",
+                      "Message": "发票识别的金额和填写的金额不一致，请检查后再提交。"
+                    }
+                  ],
+                  "ID": "77cbfee0-51e5-438d-83b7-ebcee68f78be"
+                }
+              ]
+            }
+          ],
+          "ID": "2695ffd0-0a1c-4471-80c7-996299f91274"
+        }
+      ]
+    },
+    {
+      "$type": "Forguncy.Model.ServerTransactionCommand, ServerDesignerCommon",
+      "CommandList": [
+        {
+          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+          "ParameterName": "上传月份",
+          "ParameterValue": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=DATE(YEAR(TODAY()),MONTH(TODAY()),1)"
+          },
+          "ID": "f9d604835d6344eb93c02c16d197c94f",
+          "Comments": "默认当月"
+        },
+        {
+          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+          "ParameterName": "当前用户的公司代码",
+          "ParameterValue": "%CurrentUser.公司代码%",
+          "ID": "532cbcb9921140ba93f53f4f6df34f05"
+        },
+        {
+          "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+          "ParameterName": "未集齐月份发票记录",
+          "TableValue": {
+            "TableName": "Invoice_每月餐补记录表",
+            "TableValueType": 1,
+            "BindingInfos": [
+              {
+                "GUID": "0e0879d0-64bb-44cf-9f9e-d3c84e9a867c",
+                "BindingInfo": {
+                  "TableName": "Invoice_每月餐补记录表",
+                  "ColumnName": "月份",
+                  "GUID": "a8bd9a65-7bc7-4a35-9719-eca0144b41a4"
+                },
+                "ColumnName": "月份"
+              }
+            ],
+            "SqlCondition": {
+              "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+              "SubConditions": [
+                {
+                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                  "ColumnBindingInfo": {
+                    "TableName": "Invoice_每月餐补记录表",
+                    "ColumnName": "用户",
+                    "GUID": "03facfff-60d5-42c2-a120-06df8cd97069"
+                  },
+                  "Value": "%CurrentUser.UserName%"
+                },
+                {
+                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                  "ColumnBindingInfo": {
+                    "TableName": "Invoice_每月餐补记录表",
+                    "ColumnName": "报销方式ID",
+                    "GUID": "d120feea-ceab-484c-bb19-3c0ecf1bade5"
+                  },
+                  "Value": "1"
+                },
+                {
+                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                  "CompareType": 1,
+                  "ColumnBindingInfo": {
+                    "TableName": "Invoice_每月餐补记录表",
+                    "ColumnName": "发票是否集齐",
+                    "GUID": "99400b4f-5bfc-4f5f-98ff-fc738455df80"
+                  },
+                  "Value": "1"
+                }
+              ]
+            },
+            "TopCount": "1",
+            "OrderBySqlCondition": {
+              "OrderByColumns": [
+                {
+                  "ColumnBindingInfo": {
+                    "TableName": "Invoice_每月餐补记录表",
+                    "ColumnName": "月份",
+                    "GUID": "22575069-24a6-4619-9865-f0d140d8e7da"
+                  },
+                  "Order": 0
+                }
+              ]
+            }
+          },
+          "ID": "49110ae515b647f19fcd30afecf7f4af"
+        },
+        {
+          "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+          "ConditionAndCommandPairList": [
+            {
+              "Condition": {
+                "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+                "SubConditions": [
+                  {
+                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                    "param": {
+                      "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                      "ParamObject": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=未集齐月份发票记录.月份"
+                      }
+                    },
+                    "value": "%Null%",
+                    "compareType": 1
+                  },
+                  {
+                    "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                    "param": {
+                      "$type": "Forguncy.Model.IfConditionServerSiteParam, ServerDesignerCommon",
+                      "ParamObject": {
+                        "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                        "SerializeProperty": "=未集齐月份发票记录.月份"
+                      }
+                    },
+                    "value": {
+                      "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                      "SerializeProperty": "=上传月份"
+                    },
+                    "compareType": 4
+                  }
+                ]
+              },
+              "CommandList": [
+                {
+                  "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+                  "ParameterName": "上传月份",
+                  "ParameterValue": {
+                    "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                    "SerializeProperty": "=未集齐月份发票记录.月份"
+                  },
+                  "ID": "b6398139e09b49f08f0e7fd4a8a0e888",
+                  "Comments": "修改为未集齐月份"
+                }
+              ],
+              "ID": "265506eb-a961-41eb-9ec8-e9b6466bc517"
+            }
+          ]
+        },
+        {
+          "$type": "Forguncy.Model.UpdateDataTableCommand, ServerDesignerCommon",
+          "TableName": "Invoice_实缴发票记录表",
+          "UpdateType": "add",
+          "ShowConfirm": false,
+          "UpdateBindingValues": [
+            {
+              "BindingInfo": {
+                "TableName": "Invoice_实缴发票记录表",
+                "ColumnName": "月份",
+                "GUID": "eda2fbf3-9db6-4eb6-839f-2748ef3b2231"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=上传月份"
+              }
+            },
+            {
+              "BindingInfo": {
+                "TableName": "Invoice_实缴发票记录表",
+                "ColumnName": "用户",
+                "GUID": "62a13d77-418a-4160-94fa-7a8a4733304a"
+              },
+              "Value": "%CurrentUser%"
+            },
+            {
+              "BindingInfo": {
+                "TableName": "Invoice_实缴发票记录表",
+                "ColumnName": "金额",
+                "GUID": "7a012fe5-c4e8-4eb7-8d8d-00f13e9e0a5d"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=发票金额"
+              }
+            },
+            {
+              "BindingInfo": {
+                "TableName": "Invoice_实缴发票记录表",
+                "ColumnName": "电子发票",
+                "GUID": "70d6137f-aaf6-47c5-984c-de918b734939"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=电子发票"
+              }
+            },
+            {
+              "BindingInfo": {
+                "TableName": "Invoice_实缴发票记录表",
+                "ColumnName": "备注",
+                "GUID": "841ccb72-cb83-4b81-8128-0b9f974cabb5"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=备注"
+              }
+            },
+            {
+              "BindingInfo": {
+                "TableName": "Invoice_实缴发票记录表",
+                "ColumnName": "公司代码",
+                "GUID": "fb5504b7-9da5-4d07-9f51-c1db82c31a17"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=当前用户的公司代码"
+              }
+            }
+          ]
+        },
+        {
+          "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+          "ServerCommandName": "结转当前用户上传月份及其后续月份的发票金额",
+          "Parameters": [
+            {
+              "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+              "ParamName": "上传月份",
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=上传月份"
+              }
+            }
+          ],
+          "RefreshAfterFinish": true,
+          "CheckDataValidation": true
+        },
+        {
+          "$type": "Forguncy.Model.ReturnCommand, ServerDesignerCommon",
+          "ErrorCode": "0",
+          "Message": "发票上传成功。"
+        }
+      ]
+    }
+  ]
+}

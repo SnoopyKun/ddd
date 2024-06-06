@@ -1,0 +1,224 @@
+{
+  "Rows": {
+    "RowColumnAttachedInfos": {
+      "38": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      }
+    },
+    "Count": 41
+  },
+  "Cols": {
+    "RowColumnAttachedInfos": {
+      "0": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      },
+      "56": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0
+        }
+      },
+      "57": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      },
+      "58": {
+        "GridRowColumnDefinition": {
+          "DesignLengthInPixel": 20.0,
+          "Mode": 2,
+          "MinLength": {
+            "Unit": 1
+          },
+          "MaxLength": {
+            "Value": 1.0
+          }
+        }
+      }
+    },
+    "Count": 59
+  },
+  "Values": {
+    "2,45": "%CurrentUser.FullName%"
+  },
+  "AttachInfos": {
+    "1,2": {
+      "CellType": {
+        "$type": "Forguncy.CustomMenu.ForguncyMenuCellType, Forguncy.CustomMenu",
+        "TemplateKey": "样式1",
+        "Items": [
+          {
+            "Text": "我的发票",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                "PageName": "我的发票"
+              }
+            ],
+            "CanVisitRoleList": [
+              "FGC_LoginUser"
+            ]
+          },
+          {
+            "Value": "发票管理",
+            "Text": "发票管理",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                "PageName": "发票管理"
+              }
+            ],
+            "CanVisitRoleList": [
+              "FGC_LoginUser"
+            ]
+          },
+          {
+            "Value": "发票下载",
+            "Text": "发票下载",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                "PageName": "发票下载"
+              }
+            ],
+            "CanVisitRoleList": [
+              "Administrator"
+            ]
+          },
+          {
+            "Text": "餐补记录",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                "PageName": "餐补记录"
+              }
+            ],
+            "CanVisitRoleList": [
+              "FGC_LoginUser"
+            ]
+          }
+        ],
+        "Orientation": 0,
+        "MenuLevelsStyle": [
+          {
+            "FontSize": 21.333333333333332,
+            "Bold": true,
+            "Height": 60.0,
+            "Width": 125.0,
+            "IconHeight": 24.0,
+            "IconWidth": 24.0
+          }
+        ]
+      }
+    },
+    "2,45": {
+      "CellType": {
+        "$type": "Forguncy.CurrentUserCellType, ServerDesignerCommon",
+        "CellCustomValue": "%CurrentUser%",
+        "ShowCircleUserPicture": true,
+        "NavigateSettingWhenLogout": {
+          "NavigateWhenLogoutMode": 1
+        }
+      }
+    },
+    "5,1": {
+      "IsPlaceHolderCell": true
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontFamily": 0
+      },
+      {
+        "FontFamily": 0,
+        "FontSize": 14.666666666666666,
+        "Foreground": 1,
+        "HorizontalAlignment": 2
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Body",
+        "Background 1 0",
+        "Right"
+      ]
+    },
+    "CellStyles": {
+      "2,44": 0,
+      "2,45": 1,
+      "3,44": 0
+    },
+    "SheetStyle": {
+      "FontFamily": 0
+    }
+  },
+  "Spans": [
+    "5,1,35,56",
+    "2,45,2,11",
+    "1,2,3,42"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.MasterPage, ServerDesignerCommon",
+    "PageLoadedCommandList": []
+  },
+  "PrintInfo": {
+    "PaperSize": {},
+    "Margin": {}
+  },
+  "BackgroundPictures": [
+    {
+      "FitToBrowserWidth": true,
+      "Name": "c6853874-a1fc-453a-8d92-ff8499301153.png",
+      "DisplayName": "背景图1",
+      "ForguncyPictureName": "Banner/Sources/02.png",
+      "ForguncyPictureSourceType": 3,
+      "StyleInfo": {
+        "Fill": null
+      },
+      "IsAutomaticFill": false,
+      "Location": "20,0",
+      "Size": "1120,100"
+    }
+  ]
+}//HMnzyPNpkWAmAewKax/uC1Knwef3BsrX+4DgBaC4ZH7RNV9pxxADjYrwKyaUp0Hig3D72v8trmsI559npHjFcuFfariPW2r5VuSGYYfCwFtvlO59WVQszGlgrpWqcwiEUoHS2WWkKniIrlRL1xjEZo1WPduwuiZZE7RL5SgowbzQJgK4xeiE6Q38oGkESmyb6FrWkmc37dXY7IuK1RVgeuw7NeH4PVbQOM7DTxv5HBYgDnmVWG+YcEVS1e+s8fD/pA1ysjsoeQNUboA9Jn+jJpqOLNamedjuyTk5y+Bam8oKfvX1AUX8jnY2i8I3/fC+9c7pON77M4SpSVfyNkFGdxwn+mFlIUypiVpuiS2gOgMPiaZCvzTyeV4Ax04aiqwJ4HS4aGmxOlLUfJCwT+gAq7aH8Al0KViLbEJM+6YZXZdEJM/aOoRDUGnMKE70+y780e/GSAp6VLDN3Nk3/b+r1YSOFpPboGU706BtGodVN2W4WSWmNyheUH5D8MI5FpHrBsQS6Wc3LfWEnAyE929Sd9+v9SNWjW1fkB9dKfaEqE8L28TKv2yye9l1J4oI1z8wTRwSoIOhP6WWoPS4Wn5smKpezFSuePS+X5XrrOEuulUDZAwjHO+oV6QfP4yrX7WHEAdVNzn9lxxmxzb6i9rshj6yky86aasmiO0MT4KV77fR1yePwIxlqxZ/7l+znN5AwTOJUQ9qRM4HH+iG2/hEY9DEcw3SSr5RUq+yyeGJbl67+h8umkwiIWQeLf1PZLjBg/atIC/MU2kl0MT2en6GgPHQuPmUXI6dkUsvpUhUQFzZKATnHKItshsJLMNtDUSPZEzv8A0P2bVFqf3UxdsVz9zGKpxSEpCK1+GS5HyTgG5j2Bm86WXH3FSDYTBwYYom3I2DG56XUWqJweehqtmGWA==|920
